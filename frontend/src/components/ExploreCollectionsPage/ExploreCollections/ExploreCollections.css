@@ -1,0 +1,53 @@
+.collections-explore {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+
+
+
+.collections-explore__cards {
+    width: 100%;
+    margin: 40px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 324px;
+    grid-auto-rows: 324px;
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 1440px){
+    .collections-explore__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 950px){
+    .collections-explore__cards {
+        margin: 20px 0 0;
+        grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+        grid-template-rows: 248px;
+        grid-auto-rows: 248px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .collections-explore__cards {
+        row-gap: 29px;
+    }
+
+    
+}
+
+@media (max-width: 760px) {
+    .collections-explore__cards {
+        margin: 20px 0 0;
+        grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+        grid-template-rows: 248px;
+        grid-auto-rows: 248px;
+    }
+}

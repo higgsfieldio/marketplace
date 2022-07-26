@@ -1,0 +1,433 @@
+.dashboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 100%;
+    margin: 0;
+    color: var(--main-text-color);
+}
+
+.dashboard__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    margin: 20px 0 0;
+    color: var(--main-text-color);
+    opacity: 0.8;
+}
+
+.dashboard__container {
+    margin: 40px 0 0;
+    display: grid;
+    grid-template-columns: minmax(325px, 0.7fr) 1fr 1.2fr;
+    grid-template-rows: 250px 250px;
+    grid-auto-rows: 240px;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    grid-template-areas:
+        "level profit leaderboard"
+        "level refferals leaderboard";
+}
+
+.dashboard__item {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-color: var(--main-element-bg);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard__item_level {
+    grid-area: level;
+    padding: 20px 28px 28px;
+}
+
+.dashboard__item_profit {
+    grid-area: profit;
+    padding: 52px 0;
+}
+
+.dashboard__item_refferals {
+    grid-area: refferals;
+    padding: 78px 0;
+}
+
+.dashboard__item_leaderboard {
+    grid-area: leaderboard;
+    overflow: auto;
+}
+
+.dashboard__level-name {
+    font-style: normal;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+    color: var(--main-text-color);
+}
+
+.dashboard__level-percent {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    margin: 8px auto 0 0;
+    color: var(--main-text-color);
+    opacity: 0.7;
+}
+
+.dashboard__level-hint {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--main-text-color);
+    box-sizing: border-box;
+    opacity: 0.3;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dashboard__level-hint-icon {
+    width: 8px;
+    height: 12px;
+}
+
+.dashboard__level-hint-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.dashboard__level-hint:hover {
+    opacity: 1;
+}
+
+.dashboard__level-icon {
+    width: 269px;
+    height: 292px;
+    margin: 15px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dashboard__level-icon-phone-scroll {
+    display: none;
+}
+
+.dashboard__level-spline {
+    /* width: 100%; */
+    z-index: 0;
+    position: relative;
+}
+
+.dashboard__level-volume {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+    margin: 39px 0 0;
+    color: var(--main-text-color);
+}
+
+.dashboard__level-volume-subtitle {
+    margin: 0 0 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.dashboard__profit-in-dollar {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--main-text-color);
+}
+
+.dashboard__profit-value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px 0 0;
+}
+
+.dashboard__profit-value-near {
+    margin: 0 8px 0 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--main-text-color);
+}
+
+.dashboard__profit-value-near-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.dashboard__profit-value-near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.dashboard__profit-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 24px 0 0;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.dashboard__refferals-number {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin: 0;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.dashboard__refferals-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 24px 0 0;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+
+.dashboard__leaderboard-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 32px 0 0;
+    padding: 0 0 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--main-text-color);
+}
+
+.dashboard__refferals-list {
+    display: flex;
+    flex-direction: column;
+    min-height: 356px;
+    width: 100%;
+    background-color: var(--main-element-bg);
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin: 20px 0 0;
+}
+
+.dashboard__refferals-list-no-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    /* or 34px */
+    padding: 0 16px;
+    max-width: 570px;
+    text-align: center;
+    margin: 122px auto 0;
+    color: var(--main-text-color);
+}
+
+.dashboard__refferals-list-no-btn {
+    margin: 20px auto 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    background: #8383FE;
+    border-radius: 100px;
+    background-color: var(--main-link-color);
+    color: var(--main-link-text-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dashboard__refferals-list-no-btn:hover {
+    opacity: 0.8;
+}
+
+
+@media (max-width: 1300px) {
+    .dashboard__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "level profit"
+            "level refferals"
+            "leaderboard leaderboard"
+            "leaderboard leaderboard";
+    }
+
+    .dashboard__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    .dashboard__subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        margin: 12px 0 0;
+    }
+}
+
+@media (max-width: 930px) {
+    .dashboard__refferals-list-no-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+
+
+    .dashboard__level-icon-phone-scroll {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        position: absolute;
+    }
+
+    .dashboard__container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "level"
+            "level"
+            "profit"
+            "refferals"
+            "leaderboard"
+            "leaderboard";
+        grid-template-rows: 240px;
+        grid-auto-rows: 240px;
+    }
+
+
+    .dashboard__item_profit {
+        grid-area: profit;
+        padding: 68px 0 0;
+    }
+
+    .dashboard__profit-value-near {
+        font-size: 28px;
+    }
+
+    .dashboard__profit-value-near-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .dashboard__profit-in-dollar {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .dashboard__profit-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .dashboard__item_refferals {
+        grid-area: refferals;
+        padding: 78px 0;
+    }
+
+    .dashboard__refferals-number {
+        font-size: 28px;
+    }
+
+    .dashboard__refferals-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .dashboard__item_leaderboard {
+        grid-area: leaderboard;
+        overflow: auto;
+    }
+
+    .dashboard__item_level {
+        grid-area: level;
+        padding: 20px 14px 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .dashboard__refferals-list-no-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+    }
+}

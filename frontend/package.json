@@ -1,0 +1,59 @@
+{
+  "name": "higgsfield-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.4.2",
+    "@splinetool/react-spline": "^2.1.0",
+    "@splinetool/runtime": "^0.9.39",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "js-base64": "^3.5.2",
+    "moment-timezone": "^0.5.34",
+    "near-api-js": "^0.44.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-error-overlay": "6.0.9",
+    "react-meta-tags": "^1.0.1",
+    "react-page-visibility": "^6.4.0",
+    "react-player": "^2.10.0",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "4.0.3",
+    "react-swipeable": "^7.0.0",
+    "recharts": "^2.1.9",
+    "util": "^0.12.4",
+    "validator": "^13.7.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build &&  scp -r ./build/*  near-server@51.250.22.9:/home/near-server/near/front && ssh near-server@51.250.22.9"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

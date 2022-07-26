@@ -1,0 +1,180 @@
+@import url(./assets/fonts/Roboto/stylesheet.css);
+@import url(./assets/fonts/Urbanist/stylesheet.css);
+
+
+
+
+html[data-theme='dark'] {
+  /* app */
+  --app-background-color: #1C1B1E;
+  /* header */
+  --header-background-color: rgba(36, 35, 41, 0.6);
+  --header-input-background-color: #292830;
+  --header-input-text-color: #FFFFFF;
+  --header-text-color: #FFFFFF;
+  --header-input-border-color-hover: rgba(255, 255, 255, 0.12);
+  --header-input-border-color-focus: rgba(255, 255, 255, 0.44);
+  --header-input-border-color-shadow: rgba(255, 255, 255, 0.12);
+  --header-link-text-color: rgba(255, 255, 255, 0.9);
+  --header-theme-btn-bg: #F6F2FC;
+  --header-theme-text-color: #F6F2FC;
+  --header-theme-selector-bg: #242329;
+  --header-search-btn-border-color: rgba(255, 255, 255, 0.12);
+  --header-search-btn-icon-color: #FFFFFF;
+  --header-theme-btn-bg2: #F6F2FC;
+  /* footer */
+  --footer-container-bg: #242329;
+  --footer-input-container-bg: #292830;
+  --footer-input-text-color: #FFFFFF;
+  --footer-input-placeholder-color: #929292;
+  --footer-main-text-color: #FFFFFF;
+  --footer-sub-text-color: #929292;
+  --footer-social-bg: #292830;
+  --footer-logo-bg: #FFFFFF;
+  /* main */
+  --main-text-color: #FFFFFF;
+  --main-secondary-text-color: #929292;
+  --main-subtitle-text-color: rgba(255, 255, 255, 0.8);
+  --main-border-color: rgba(255, 255, 255, 0.12);
+  --main-border-color-hover: rgba(255, 255, 255, 0.42);
+  --main-border-color-focus: rgba(255, 255, 255, 0.8);
+  --main-element-bg: #242329;
+  --main-element-secondary-bg: #292830;
+  --main-link-color: #6F6FE9;
+  --main-releases-bg: radial-gradient(100% 224.43% at 0% 0%, #37365B 0%, #2B2A39 47.92%, #37365A 100%);
+  --main-preloader-color: #6F6FE9;
+  --main-link-text-color: #FFFFFF;
+  --main-popup-background-color: #292830;
+  --main-image-preloader-color: #242329;
+  --main-image-second-preloader-color: #292830;
+  --main-popup-input-color: #222127;
+  --main-graf-border-color: #343444;
+  --main-chart-bg: #292830;
+  --main-chart-text: #FFFFFF;
+  --main-table-bg: #1C1B1E;
+}
+
+
+
+html[data-theme='light'] {
+  /* app */
+  --app-background-color: #FFFBFF;
+  /* header */
+  --header-background-color: rgba(255, 255, 255, 0.6);
+  --header-input-background-color: #F1EDFB;
+  --header-input-text-color: rgba(18, 18, 18, 1);
+  --header-text-color: rgba(18, 18, 18, 1);
+  --header-input-border-color-hover: rgba(18, 18, 18, 0.12);
+  --header-input-border-color-focus: rgba(18, 18, 18, 0.44);
+  --header-input-border-color-shadow: rgba(18, 18, 18, 0.12);
+  --header-link-text-color: rgba(18, 18, 18, 0.9);
+  --header-theme-btn-bg: #121212;
+  --header-theme-text-color: #121212;
+  --header-theme-selector-bg: #F6F2FC;
+  --header-search-btn-border-color: rgba(18, 18, 18, 0.12);
+  --header-search-btn-icon-color: #121212;
+  --header-theme-btn-bg2: #121212;
+  /* footer */
+  --footer-container-bg: #F6F2FC;
+  --footer-input-container-bg: #F1EDFB;
+  --footer-input-text-color: #121212;
+  --footer-input-placeholder-color: #929292;
+  --footer-main-text-color: #121212;
+  --footer-sub-text-color: #929292;
+  --footer-social-bg: #6F6FE9;
+  --footer-logo-bg: #121212;
+  /* main */
+  --main-text-color: #121212;
+  --main-secondary-text-color: #929292;
+  --main-subtitle-text-color: rgba(18, 18, 18, 0.9);
+  --main-border-color: rgba(18, 18, 18, 0.12);
+  --main-border-color-hover: rgba(18, 18, 18, 0.42);
+  --main-border-color-focus: rgba(18, 18, 18, 0.8);
+  --main-element-bg: #F6F2FC;
+  --main-element-secondary-bg: #F1EDFB;
+  --main-link-color: #6F6FE9;
+  --main-releases-bg: linear-gradient(115.25deg, #6F6FE9 -18.56%, #F6F2FC 20.77%, #F6F2FC 75.82%, #6F6FE9 118.72%);
+  --main-preloader-color: #6F6FE9;
+  --main-link-text-color: #FFFFFF;
+  --main-popup-background-color: #F1EDFB;
+  --main-image-preloader-color: #F6F2FC;
+  --main-image-second-preloader-color: #F1EDFB;
+  --main-popup-input-color: rgba(18, 18, 18, 0.12);
+  --main-graf-border-color: #D9D9D9;
+  --main-chart-bg: #E2E2FB;
+  --main-chart-text: #121212;
+  --main-table-bg: #FFFBFF;
+}
+
+
+html[data-theme='neon'] {
+  /* app */
+  --app-background-color: #6C67F5;
+  /* header */
+  --header-background-color: rgba(113, 85, 255, 0.4);
+  --header-input-background-color: #F1EDFB;
+  --header-input-text-color: rgba(18, 18, 18, 1);
+  --header-text-color: rgba(255, 255, 255, 0.9);
+  --header-input-border-color-hover: rgba(18, 18, 18, 0.12);
+  --header-input-border-color-focus: rgba(18, 18, 18, 0.44);
+  --header-input-border-color-shadow: rgba(18, 18, 18, 0.12);
+  --header-link-text-color: rgba(255, 255, 255, 0.9);
+  --header-theme-btn-bg: #6F6FE9;
+  --header-theme-text-color: #6F6FE9;
+  --header-theme-selector-bg: #F6F2FC;
+  --header-search-btn-border-color: rgba(255, 255, 255, 0.12);
+  --header-search-btn-icon-color: #F6F2FC;
+  --header-theme-btn-bg2: rgba(0, 0, 0, 0.16);
+  /* footer */
+  --footer-container-bg: rgba(113, 85, 255, 0.72);
+  --footer-input-container-bg: rgba(246, 242, 252, 0.16);
+  --footer-input-text-color: #FFFFFF;
+  --footer-input-placeholder-color: rgba(255, 255, 255, 0.8);
+  --footer-main-text-color: #FFFFFF;
+  --footer-sub-text-color: rgba(255, 255, 255, 0.8);
+  --footer-social-bg: #6F6FE9;
+  --footer-logo-bg: #FFFFFF;
+  /* main */
+  --main-text-color: #FFFFFF;
+  --main-secondary-text-color: rgba(255, 255, 255, 0.8);
+  --main-subtitle-text-color: rgba(255, 255, 255, 0.8);
+  --main-border-color: rgba(255, 255, 255, 0.12);
+  --main-border-color: rgba(255, 255, 255, 0.12);
+  --main-border-color-hover: rgba(255, 255, 255, 0.42);
+  --main-border-color-focus: rgba(255, 255, 255, 0.8);
+  --main-element-bg: rgba(113, 85, 255, 0.72);
+  --main-element-secondary-bg: rgba(113, 85, 255, 0.72);
+  --main-link-color: #FFFFFF;
+  --main-releases-bg: rgba(113, 85, 255, 0.72);
+  --main-preloader-color: #FFFFFF;
+  --main-link-text-color: #6F6FE9;
+  --main-popup-background-color: #6F6FE9;
+  --main-image-preloader-color: #6F6FE9;
+  --main-image-second-preloader-color: #776BD2;
+  /* --main-popup-background-color: #F1EDFB; */
+  --main-popup-input-color: rgba(113, 85, 255, 0.72);
+  --main-graf-border-color: #9785F1;
+  --main-chart-bg: #C1C1FF;
+  --main-chart-text: #121212;
+  --main-table-bg: rgba(113, 85, 255, 0.72);
+}
+
+html {
+  background-color: var(--app-background-color);
+}
+
+body {
+  margin: 0;
+  font-family: 'Urbanist', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-display: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--app-background-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

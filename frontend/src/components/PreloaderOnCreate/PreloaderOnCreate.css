@@ -1,0 +1,74 @@
+.ap {
+	width: 100px;
+	height: 256px;
+}
+.ap__ring {
+	stroke: var(--main-border-color);
+	transition: stroke 0.3s;
+}
+.ap__worm1,
+.ap__worm2 {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+.ap__worm1 {
+	animation-name: worm1;
+}
+.ap__worm2 {
+	animation-name: worm2;
+	visibility: hidden;
+}
+
+.ap-grad__stopcolor1{
+    stop-color: var(--main-link-color);
+}
+
+.ap-grad__stopcolor2{
+    stop-color: var(--main-link-color);
+}
+
+.ap-grad__stopcolor3{
+    stop-color: var(--main-link-color);
+}
+
+/* Animtions */
+@keyframes worm1 {
+	from {
+		animation-timing-function: ease-in-out;
+		stroke-dashoffset: -87.96;
+	}
+	20% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: 0;
+	}
+	60% {
+		stroke-dashoffset: -791.68;
+		visibility: visible;
+	}
+	60.1%,
+	to {
+		stroke-dashoffset: -791.68;
+		visibility: hidden;
+	}
+}
+@keyframes worm2 {
+	from,
+	60% {
+		stroke-dashoffset: -87.96;
+		visibility: hidden;
+	}
+	60.1% {
+		animation-timing-function: cubic-bezier(0,0,0.5,0.75);
+		stroke-dashoffset: -87.96;
+		visibility: visible;
+	}
+	77% {
+		animation-timing-function: cubic-bezier(0.5,0.25,0.5,0.88);
+		stroke-dashoffset: -340;
+		visibility: visible;
+	}
+	to {
+		stroke-dashoffset: -669.92;
+		visibility: visible;
+	}
+}

@@ -1,0 +1,434 @@
+.releases {
+    margin: 136px 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.releases__btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.releases__selection-btns {
+    display: flex;
+    flex-direction: row;
+    margin: 0 32px 0 0;
+}
+
+.releases__selection-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: border-color 0.2s linear;
+    border: 1.22222px solid var(--main-text-color);
+    margin: 0 8px 0 0;
+    cursor: pointer;
+}
+
+.releases__selection-btn_inactive {
+    border: 1.22222px solid var(--main-border-color);
+}
+
+.releases__selection-btn:last-of-type {
+    margin: 0;
+}
+
+.releases__selection-btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.releases__selection-btn-icon-stroke {
+    stroke: var(--main-text-color);
+}
+
+.releases__link {
+    border: 1px solid var(--main-border-color-hover);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    border-radius: 1000px;
+
+}
+
+.releases__link-text {
+    text-decoration: none;
+    margin: 0;
+    font-family: Urbanist;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.1em;
+    color: var(--main-text-color);
+
+}
+
+.releases__card {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 82px * 2);
+    margin: 0 auto;
+}
+
+.releases__card-first-container {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+
+.releases__card-image-container {
+    width: 430px;
+    height: 430px;
+    border-radius: 16px;
+    overflow: hidden;
+    /* background: var(--main-releases-bg); */
+}
+
+.releases__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.releases__card-socials {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 0;
+}
+
+.releases__card-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    margin: 0 8px 0 0;
+    transition: background-color 0.3s linear;
+    background-color: var(--main-element-bg);
+    text-decoration: none;
+}
+
+.releases__card-social:last-of-type {
+    margin: 0;
+}
+
+.releases__card-social-icon-fill {
+    transition: fill 0.2s linear;
+    fill: var(--main-text-color);
+}
+
+.releases__card-texts-container {
+    margin: 98px 0 0 -30px;
+    height: calc(493px - 20px - 24px);
+    z-index: 0;
+    position: relative;
+    width: calc(100% - 411px);
+    background: var(--main-releases-bg);
+    border-radius: 16px;
+    padding: 20px 35px 24px 54px;
+    display: flex;
+    flex-direction: column;
+}
+
+.releases__card-stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.releases__card-stat {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 40px 0 0;
+}
+
+.releases__card-stat:last-of-type {
+    margin: 0;
+}
+
+.releases__card-stat-name {
+    margin: 0;
+    color: var(--main-text-color);
+
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.releases__card-stat-line {
+    margin: 8px 0 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-border-color);
+}
+
+.releases__card-stat-value {
+    margin: 0;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 130%;
+    color: var(--main-text-color);
+    word-wrap: break-word;
+    height: 47px;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+}
+
+.releases__card-name {
+    margin: 20px 0 0;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    color: var(--main-text-color);
+}
+
+.releases__card-stat-near-icon {
+    width: 31px;
+    height: 31px;
+    margin: 0 14px 0 4px;
+}
+
+.releases__card-stat-value-container {
+    display: flex;
+    margin: 8px 0 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.releases__card-stat-near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.releases__card-description {
+    color: var(--main-text-color);
+    margin: 20px 0 0;
+    max-height: 208px;
+    overflow: hidden;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.releases__card-date-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 28px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(216.56deg, #E250E5 5.32%, #4B50E6 94.32%);
+    border-radius: 16px;
+    margin: auto 0 0;
+}
+
+.releases__card-date-btn-text {
+    margin: 0;
+    font-family: Urbanist;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.9231px;
+    line-height: 130%;
+    /* identical to box height, or 22px */
+text-align: center;
+
+    /* text/dark/title */
+
+    color: #FFFFFF;
+}
+
+.releases__card-preloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.releases__card-image-container_mobile{
+    display: none;
+}
+
+@media (max-width: 1470px) {
+    .releases__card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .releases__card-image-container {
+        width: 337px;
+        height: 337px;
+    }
+
+    .releases__card-texts-container {
+        height: 504px;
+        padding: 20px 20px 20px 40px;
+        margin: 91px 0 0 -20px;
+    }
+
+    .releases__card-stat-value {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 130%;
+        height: 37px;
+    }
+
+    .releases__card-stat-near-icon {
+        width: 21px;
+        height: 21px;
+        margin: 0 9px 0 4px;
+    }
+
+    .releases__card-name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 130%;
+        margin: 28px 0 0;
+    }
+
+    .releases__card-description {
+        font-size: 18px;
+        max-height: 258px;
+    }
+
+    .releases__card-date-btn-text {
+        font-size: 18px;
+    }
+}
+
+
+
+@media (max-width: 927px) {
+    .releases__card-image-container {
+        width: 269px;
+        height: 237px;
+    }
+
+    .releases__card-texts-container {
+        width: calc(100% - 289px);
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 760px) {
+    .releases__card-image-container_pc{
+        display: none;
+    }
+    .releases__card-image-container_mobile{
+        display: flex;
+    }
+
+    .releases__card {
+        flex-direction: column;
+        margin: 32px 0 0;
+    }
+    .releases__btns{
+        justify-content: space-between;
+    }
+
+    .releases__card-texts-container {
+        margin: 12px 0 0;
+        width: calc(100% - 12px * 2);
+        padding: 20px 12px 12px 12px;
+        height: fit-content;
+    }
+
+    .releases__card-first-container {
+        flex-direction: column-reverse;
+    }
+
+    .releases__card-socials {
+        margin: 0 0 12px 0;
+    }
+
+    .releases__card-image-container {
+        height: 271px;
+        width: 100%;
+    }
+
+    .releases__card-description {
+        max-height: unset;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 130%;
+        margin: 16px 0 0;
+    }
+
+    .releases__card-stat-name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    .releases__card-stat-line {
+        margin: 12px 0 0;
+    }
+
+    .releases__card-stat-value {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 130%;
+    }
+
+    .releases__card-stat {
+        margin: 0 20px 0 0;
+    }
+
+    .releases__card-name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+        margin: 20px 0 0;
+    }
+
+    .releases__card-date-btn {
+        margin: 16px 0 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        padding: 16px 20px;
+    }
+}

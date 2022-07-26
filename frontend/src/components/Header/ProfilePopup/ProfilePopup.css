@@ -1,0 +1,316 @@
+.profile-popup {
+    position: absolute;
+    right: -1px;
+    top: 48px;
+    background-color: var(--main-popup-background-color);
+    border-radius: 16px;
+    width: 264px;
+    box-sizing: border-box;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transform: scale(0, 0);
+    transition: transform 0.3s ease-in-out;
+    display: none;
+}
+
+.profile-popup_active {
+    transform: scale(1, 1);
+    animation: 0.15s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s 1 normal both running popup;
+}
+
+
+.profile-popup__close{
+    margin: 0 0 0 auto;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
+
+.profile-popup__close-fill{
+    fill: var(--main-text-color);
+}
+
+
+.profile-popup__username {
+    margin: -22px 0 0 0;
+    color: var(--main-text-color);
+    max-width: calc(100% - 16px - 16px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.profile-popup__wallet {
+    margin: 12px 0 0;
+    background-color: var(--main-element-bg);
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    border-radius: 49px;
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    min-width: 145px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.profile-popup__balance {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--main-border-color);
+    padding: 12px;
+    border-radius: 16px;
+    margin: 20px 0 0;
+    position: relative;
+}
+
+.profile-popup__balance-near-icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-border-color);
+    border-radius: 50%;
+    margin: 0 8px 0 0;
+}
+
+.profile-popup__balance-near-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.profile-popup__balance-near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.profile-popup__balance-texts {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 40px - 8px);
+}
+
+.profile-popup__balance-text-title {
+    margin: 0;
+    color: var(--main-text-color);
+    opacity: 0.4;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.profile-popup__balance-text-value-container {
+    margin: 8px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.profile-popup__balance-text-value {
+    margin: 0 2px 0 0;
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    line-height: 100%;
+}
+
+.profile-popup__balance-text-value-near-icon {
+    width: 13px;
+    height: 13px;
+    margin: 0 8px 0 0;
+}
+
+.profile-popup__balance-text-value-near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.profile-popup__balance-text-value-dollar {
+    margin: 0;
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.profile-popup__balance-explorer {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    text-decoration: none;
+}
+
+.profile-popup__balance-explorer-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.12;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.profile-popup__balance-explorer-icon:hover {
+    opacity: 0.7;
+}
+
+.profile-popup__balance-explorer-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.profile-popup__create {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0 0;
+    width: 100%;
+}
+
+.profile-popup__create-title {
+    margin: 0;
+    color: var(--main-text-color);
+    opacity: 0.7;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 240%;
+}
+
+.profile-popup__create-item {
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-popup__create-item-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 12px 0 0;
+}
+
+.profile-popup__create-item-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.profile-popup__create-item-text {
+    margin: 0;
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.profile-popup__profile{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0;
+    width: 100%;
+}
+
+.profile-popup__profile-title {
+    margin: 0;
+    color: var(--main-text-color);
+    opacity: 0.7;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 240%;
+}
+
+.profile-popup__profile-item{
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
+    margin: 6px 0;
+}
+
+.profile-popup__profile-item_logout{
+    margin: 24px 0 0;
+}
+
+.profile-popup__profile-item-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 12px 0 0;
+}
+
+.profile-popup__profile-item-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.profile-popup__profile-item-text {
+    margin: 0;
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+
+@media (max-width: 700px) {
+    .profile-popup {
+        display: flex;
+        transform: scale(1, 1);
+        width: 100%;
+        position: fixed;
+        bottom: -100vh;
+        top: unset;
+        left: 0;
+        background-color: var(--main-popup-background-color);
+        height: fit-content;
+        z-index: 10;
+        transition: transform 0.3s ease-in-out;
+        box-sizing: border-box;
+        border-radius: 16px 16px 0px 0px;
+        padding: 12px 12px 12px 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-popup_active {
+
+        transform: scale(1, 1);
+        transform: translateY(-100vh);
+        animation: unset;
+
+    }
+}

@@ -1,0 +1,31 @@
+.search-preloader {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-preloader__container {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.search-preloader__loader {
+animation: rotate 0.5s infinite linear;
+}
+.search-preloader__loader-color{
+    stop-color: var(--main-link-color);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}

@@ -1,0 +1,225 @@
+.faq {
+  max-width: 876px;
+  font-family: "Urbanist";
+  margin: 0 auto;
+  padding: 88px 130px 0 0;
+}
+
+.faq__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 100%;
+  color: var(--main-text-color);
+  margin: 0;
+}
+
+.faq__container {
+  display: flex;
+  padding-top: 40px;
+}
+
+.faq__questions-dropdown {
+  display: none;
+}
+
+.faq__questions {
+  list-style: none;
+  padding: 0 88px 0 0;
+  margin: 0;
+}
+
+.faq__item {
+  margin-bottom: 16px;
+}
+
+.faq__item:last-of-type {
+  margin: 0;
+}
+
+.faq__question {
+  width: 170px;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: left;
+  color: var(--main-text-color);
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.faq__question_type_selected {
+  border: 1px solid var(--main-link-color);
+  pointer-events: none;
+}
+
+.faq__question:hover {
+  border-color: var(--main-link-color);
+  opacity: 0.7;
+}
+
+.faq__heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  color: var(--main-text-color);
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+.faq__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--main-subtitle-text-color);
+  margin: 0;
+}
+.faq__text_subtext{
+  margin: 32px 0 0;
+}
+.faq__list {
+  list-style: none;
+  padding: 80px 0 0;
+  margin: 0;
+}
+
+.faq__answer-item {
+  margin-bottom: 32px;
+}
+
+.faq__answer-item:last-of-type {
+  margin: 0;
+}
+
+.faq__login-button {
+  width: 76px;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--main-link-text-color);
+  background: var(  --main-link-color);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 0;
+  margin: 32px 0px;
+}
+
+@media (max-width: 1450px) {
+  .faq {
+    padding: 57px 24px 0 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .faq {
+    width: calc(100% - 20px * 2);
+    max-width: 920px;
+    padding: 64px 0 0;
+  }
+
+  .faq__title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 760px) {
+  .faq {
+    width: calc(100% - 12px * 2);
+    padding: 64px 0 0;
+  }
+
+  .faq__title {
+    font-size: 32px;
+  }
+
+  .faq__container {
+    flex-direction: column;
+  }
+
+  .faq__questions-dropdown {
+    width: calc(100% - 8px * 2);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--main-border-color);
+    padding: 16px 8px;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .faq__questions-dropdown_active {
+    border-bottom-color: var(--main-link-color);
+  }
+
+  .faq__question-dropdown-selected {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .faq__question-selected {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--main-text-color);
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .faq__dropdown-arrow {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .faq__dropdown-arrow_active {
+    transform: rotate(180deg);
+  }
+
+  .faq__dropdown-arrow-stroke {
+    stroke: var(--main-text-color);
+  }
+
+  .faq__questions-dropdown-items {
+    padding-top: 16px;
+  }
+
+  .faq__question-item {
+    width: 100%;
+    font-family: "Urbanist";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: left;
+    color: var(--main-text-color);
+    background-color: transparent;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+  }
+
+  .faq__questions {
+    display: none;
+  }
+
+  .faq__answer {
+    padding-top: 40px;
+  }
+
+  .faq__heading {
+    font-size: 20px;
+  }
+}

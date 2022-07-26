@@ -1,0 +1,253 @@
+.bid-history {
+    display: flex;
+    flex-direction: column;
+}
+
+.bid-history__items {
+    display: flex;
+    flex-direction: column;
+    height: 192px;
+    overflow-y: scroll;
+
+}
+
+.bid-history__items::-webkit-scrollbar {
+    width: 3px;
+}
+
+.bid-history__items::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px var(--main-element-secondary-bg); */
+    border: none;
+    outline: none;
+    background-color: var(--main-element-secondary-bg);
+}
+
+.bid-history__items::-webkit-scrollbar-thumb {
+    background-color: var(--main-subtitle-text-color);
+    outline: none;
+    border-radius: 100px;
+}
+
+.bid-history__items_hide-scroll::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px var(--main-element-secondary-bg); */
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+}
+
+.bid-history__no-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bid-history__no-item-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.bid-history__no-item-text {
+    margin: 20px 0 0;
+    color: var(--main-text-color);
+    font-size: 16px;
+    text-align: center;
+    max-width: 90%;
+}
+
+
+.bid-history__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 36px);
+    padding: 12px 0 12px 0;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+.bid-history__item:first-of-type {
+    padding: 0 0 12px 0;
+}
+
+
+.bid-history__item-avatar {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    margin: 0 16px 0 0;
+    text-decoration: none;
+}
+
+.bid-history__item-avatar-bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--main-element-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bid-history__owner-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bid-history__owner-avatar-placeholder {
+    width: 18px;
+    height: 10px;
+}
+
+.bid-history__owner-avatar-placeholder-fill {
+    fill: var(--main-text-color);
+}
+
+.bid-history__item-avatar-verified {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--main-link-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bid-history__item-avatar-verified-icon {
+    width: 10px;
+    height: 10px;
+}
+
+.bid-history__item-avatar-verified-icon-fill {
+    fill: var(--main-link-text-color);
+}
+
+.bid-history__item-texts {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 44px - 16px);
+    width: 100%;
+}
+
+.bid-history__name-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bid-history__name {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bid-history__name-text {
+    margin: 0 0 0 6px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    opacity: 0.8;
+}
+
+.bid-history__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bid-history__price-value {
+    margin: 0 2px 0 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--main-text-color);
+}
+
+.bid-history__near-icon {
+    width: 14px;
+    height: 14px;
+    margin: 0 8px 2px 0;
+}
+
+.bid-history__near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.bid-history__price-value-dollar {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 14px;
+    color: var(--main-text-color);
+}
+
+.bid-history__date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    color: var(--main-text-color);
+    opacity: 0.9;
+}
+
+.bid-history__item-texts_mobile{
+    display: none;
+}
+.bid-history__price-date{
+    margin: auto 0 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media (max-width: 700px){
+    .bid-history__item-texts_pc{
+        display: none;
+    }
+    .bid-history__item-texts_mobile{
+        display: flex;
+    }
+    .bid-history__item-avatar{
+        margin: 0 12px 0 0;
+    }
+    .bid-history__price-value{
+        font-size: 12px;
+    }
+    .bid-history__near-icon{
+        width: 12px;
+        height: 12px;
+        margin: 0 3px 1px 0;
+    }
+    .bid-history__price-value-dollar{
+        font-size: 12px;
+    }
+    .bid-history__date{
+        font-size: 12px;
+    }
+    .bid-history__name{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .bid-history__name-text{
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

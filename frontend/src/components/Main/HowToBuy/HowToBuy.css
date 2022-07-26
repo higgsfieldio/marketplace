@@ -1,0 +1,163 @@
+.how-to-buy {
+    display: flex;
+    flex-direction: column;
+    margin: 86px 0 0;
+}
+
+.how-to-buy__title {
+    margin: 0 auto;
+    width: 90%;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+
+    text-transform: capitalize;
+
+    color: var(--main-text-color);
+}
+
+.how-to-buy__cards {
+    margin: 40px 0 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-rows: 316px;
+    grid-auto-rows: 316px;
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.how-to-buy__card {
+    width: calc(100% - 16px * 2);
+    height: calc(100% - 20px * 2);
+    background-color: var(--main-element-bg);
+    padding: 20px 16px;
+    border-radius: 16px;
+}
+
+.how-to-buy__card-container {
+    width: 100%;
+    max-width: 412px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-to-buy__card-icon {
+    width: 52px;
+    height: 52px;
+}
+
+.how-to-buy__card-title {
+    margin: 52px 0 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height, or 125% */
+
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 90%;
+    color: var(--main-text-color);
+}
+
+.how-to-buy__card-text {
+    margin: 10px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+
+    text-align: center;
+    max-width: 90%;
+    color: var(--main-text-color);
+}
+
+.how-to-buy__card-links {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0 0;
+    justify-content: center;
+}
+
+.how-to-buy__card-link {
+    margin: 0 20px 0 0;
+    color: var(--main-link-color);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+    cursor: pointer;
+    text-decoration-line: underline;
+
+}
+
+.how-to-buy__card-link:last-of-type {
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .how-to-buy__card {
+        width: calc(100% - 12px * 2);
+        height: calc(100% - 32px - 20px);
+        padding: 32px 12px 20px;
+    }
+
+    .how-to-buy {
+        margin: 89px 0 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .how-to-buy__card-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .how-to-buy__card-text {
+        margin: 12px 0 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 120%;
+    }
+
+    .how-to-buy__card-link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 130%;
+
+    }
+
+    .how-to-buy__cards {
+        margin: 20px 0 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 289px;
+        grid-auto-rows: 289px;
+    }
+
+    .how-to-buy__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 44px;
+    }
+
+    .how-to-buy {
+        margin: 60px 0 0;
+    }
+}

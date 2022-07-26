@@ -1,0 +1,261 @@
+.about {
+  max-width: 960px;
+  font-family: "Urbanist";
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.about__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 100%;
+  color: var(--main-text-color);
+  margin: 0;
+}
+
+.about__redirect-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  justify-content: center;
+  gap: 12px;
+  padding-top: 60px;
+}
+
+.about__redirect {
+  width: 180px;
+  height: 40px;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--main-link-text-color);
+  text-decoration: none;
+  background-color: var(--main-link-color);
+  border: none;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.about__redirect_type_launchpad {
+  color: var(--main-subtitle-text-color);
+  background-color: transparent;
+  border: 1px solid var(--main-border-color);
+}
+
+.about__redirect:hover {
+  opacity: 0.8;
+}
+
+.about__redirect_type_blocked {
+  opacity: 0.3 !important;
+  cursor: no-drop;
+}
+
+.about__video {
+  width: 960px !important;
+  height: 540px !important;
+  object-fit: cover;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  border-radius: 16px;
+  margin: 40px auto 0;
+}
+
+video {
+  object-fit: cover !important;
+}
+
+.about__team {
+  padding-top: 80px;
+  margin: 0 auto;
+}
+
+.about__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 100%;
+  color: var(--main-text-color);
+  margin: 0;
+}
+
+.about__cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 268px);
+  gap: 18px;
+  justify-content: space-between;
+  list-style: none;
+  padding: 40px 0 0;
+  margin: 0 auto;
+}
+
+.about__card {
+  background-color: var(--main-element-bg);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.about__photo {
+  width: 236px;
+  border-radius: 16px;
+}
+
+.about__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  color: var(--main-text-color);
+  margin: 0;
+  padding-top: 16px;
+}
+
+.about__career {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--main-text-color);
+  margin: 0;
+  padding-top: 12px;
+}
+
+.about__touch-box {
+  padding-top: 80px;
+}
+
+.about__mail-box {
+  display: grid;
+  grid-template-columns: repeat(2, 334px);
+  justify-content: center;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.about__mail-box:first-of-type{
+  padding-top: 40px;
+}
+
+.about__send-mail {
+  max-width: 334px;
+  text-align: left;
+  color: var(--main-text-color);
+  background-color: var(--main-element-bg);
+  text-decoration: none;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.about__send-mail:hover {
+  opacity: 0.7;
+}
+
+.about__mail-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.about__mail-icon-fill {
+  fill: var(--main-text-color);
+}
+
+.about__mail-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  margin: 0;
+  padding-top: 28px;
+}
+
+.about__mail-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  margin: 0;
+  padding-top: 8px;
+}
+
+
+
+@media (max-width: 1280px) {
+  .about__title {
+    font-size: 44px;
+  }
+
+  .about__video {
+    width: 640px !important;
+    height: 360px !important;
+  }
+
+  .about__team {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about {
+    width: calc(100% - 12px * 2);
+    padding-top: 84px;
+  }
+
+  .about__title {
+    font-size: 28px;
+    padding: 0 60px;
+  }
+
+  .about__redirect-buttons {
+    grid-template-columns: auto;
+    padding-top: 40px;
+  }
+
+  .about__video {
+    width: calc(100% - 12px * 2) !important;
+    min-width: 296px;
+    max-width: 640px;
+    aspect-ratio: 16/9;
+    height: auto !important;
+    max-height: 360px;
+    min-height: 167px;
+  }
+
+  .about__heading {
+    font-size: 28px;
+  }
+
+  .about__cards-list {
+    justify-content: center;
+  }
+
+  .about__name {
+    font-size: 20px;
+  }
+
+  .about__career {
+    font-size: 16px;
+  }
+
+  .about__mail-box {
+    max-width: 334px;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .about__mail-title {
+    font-size: 20px;
+  }
+
+  .about__mail-text {
+    font-size: 16px;
+  }
+}

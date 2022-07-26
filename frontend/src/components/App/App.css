@@ -1,0 +1,115 @@
+.app {
+  background-color: var(--app-background-color);
+
+  transition: background-color 0.5s linear;
+}
+
+.app_theme_trip {
+  position: relative;
+  background-color: #776BD2;
+  z-index: 1;
+}
+
+.app_theme_trip::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(126.46% 768.1% at 126.46% -22.78%, #CFB662 0%, #CE8C60 32.29%, #7068DA 59.37%, #52B0DA 100%);
+  z-index: -1;
+  /* transition: opacity 0.5s linear;
+  opacity: 1; */
+  animation: fadein 0.5s;
+}
+
+.image_preloader {
+
+  background: linear-gradient(to right, var(--main-image-preloader-color) 8%, var(--main-image-second-preloader-color) 38%, var(--main-image-preloader-color) 54%);
+  background-size: 100vw 100vh;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+
+  height: 110%;
+  width: 110%;
+  position: relative;
+
+}
+
+.app__preloader {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -30vw 0
+  }
+
+  100% {
+    background-position: 70vw 0
+  }
+}
+
+
+
+@keyframes fadein {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.app__container {
+  padding: 103px 0 0;
+}
+
+@media (max-width: 760px) {
+  .app__container {
+    padding: 72px 0 0;
+  }
+}
+input:-webkit-autofill { 
+  -webkit-text-fill-color: var(--main-text-color) !important;
+  -webkit-background-clip: text;
+  color: var(--main-text-color);
+}
+
+
+.app__on-error{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__on-error-text{
+  margin: 0;
+  font-size: 20px;
+  color: var(--main-text-color);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.app__header-popup{
+  display: none;
+}
+
+@media (max-width: 700px){
+  .app__header-popup{
+    display: flex;
+  }
+}

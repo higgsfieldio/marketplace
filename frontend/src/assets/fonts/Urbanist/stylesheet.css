@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Urbanist';
+    src: url('Urbanist-Bold.eot');
+    src: local('Urbanist Bold'), local('Urbanist-Bold'),
+        url('Urbanist-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Urbanist-Bold.woff2') format('woff2'),
+        url('Urbanist-Bold.woff') format('woff'),
+        url('Urbanist-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('Urbanist-Regular.eot');
+    src: local('Urbanist Regular'), local('Urbanist-Regular'),
+        url('Urbanist-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Urbanist-Regular.woff2') format('woff2'),
+        url('Urbanist-Regular.woff') format('woff'),
+        url('Urbanist-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

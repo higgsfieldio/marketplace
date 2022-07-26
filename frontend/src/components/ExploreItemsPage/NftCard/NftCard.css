@@ -1,0 +1,379 @@
+.nft-card {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-element-bg);
+    box-sizing: border-box;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    border: 1px solid var(--main-border-color);
+    font-family: 'Urbanist' , 'Roboto';
+    overflow: hidden;
+}
+
+.nft-card__owner {
+    display: flex;
+      display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nft-card__owner-avatar {
+    background: var(--main-text-color);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+    margin: 0 8px 0 0;
+    position: relative;
+}
+
+.nft-card__owner-avatar-verified{
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #8383FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.nft-card__owner-avatar-verified-icon{
+    width: 10px;
+    height: 10px;
+}
+
+
+.nft-card__owner-avatar-verified-icon-fill{
+    fill: #FFFFFF;
+}
+
+
+.nft-card__owner-avatar_noowner{
+    background-color: transparent;
+}
+
+.nft-card__owner-avatar-placeholder {
+    width: 18px;
+    height: 10px;
+}
+
+.nft-card__owner-avatar-placeholder-fill {
+    fill: var(--main-element-bg);
+}
+
+.nft-card__owner-avatar-img {
+    width: 104%;
+    height: 104%;
+    border-radius: 8px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.dislpay_none {
+    width: 100%;
+    opacity: 0;
+}
+
+.nft-card__owner-link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 90%;
+}
+
+.nft-card__owner-texts {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 36px - 80px);
+}
+
+.nft-card__owner-title {
+    margin: 0;
+    color: var(--main-text-color);
+    opacity: 0.4;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+.nft-card__owner-name {
+    color: var(--main-text-color);
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(100%);
+}
+
+.nft-card__item-preview {
+    width: 100%;
+    height: 333px;
+    /* background-color: var(--main-border-color); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 12px 0 0 0;
+    position: relative;
+    text-decoration: none;
+}
+
+
+
+.nft-card__explict-warning {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(10px);
+}
+
+.nft-card__explict-warning-text {
+    font-size: 20px;
+    color: var(--main-text-color);
+    margin: 24px 0 0;
+}
+
+.nft-card__explict-warning-btn {
+    background-color: var(--main-link-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 16px 0 0;
+}
+
+.nft-card__explict-warning-btn-text {
+    color: var(--main-link-text-color);
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+
+.nft-card__item-preview-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.nft-card__item-likes {
+    box-sizing: border-box;
+    padding: 4px 8px;
+    z-index: 2;
+    align-self: flex-start;
+    width: fit-content;
+    background-color: var(--main-element-bg);
+    /* top: -52px;
+    right: 0; */
+    margin: 0 0 0 auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.nft-card__item-likes-icon {
+    margin: 0 4px 0 0;
+    width: 16px;
+    height: 16px;
+}
+
+.nft-card__item-likes-icon-fill {
+
+    fill: rgba(0, 0, 0, 0);
+    transition: fill 0.2s ease-in-out;
+    stroke: var(--main-text-color);
+    stroke-width: 2px;
+}
+
+.nft-card__item-likes-icon-fill_liked{
+    fill: var(--main-text-color);
+}
+
+.nft-card__item-likes-count {
+    margin: 0 0 0 -0;
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+
+}
+
+.nft-card__auction {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    width: fit-content;
+    padding: 8px;
+    background-color: var(--main-element-bg);
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nft-card__auction-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 0 0;
+}
+
+.nft-card__auction-icon-fill {
+    fill: var(--main-link-color);
+}
+
+.nft-card__auction-timer {
+    margin: 0 0 0 0;
+    color: var(--main-text-color);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: normal;
+}
+
+.nft-card__name {
+    margin: 8px 0 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    /* identical to box height, or 18px */
+
+    text-transform: capitalize;
+    color: var(--main-text-color);
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.nft-card__prices {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0;
+}
+
+.nft-card__price {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: var(--main-element-secondary-bg);
+    padding: 4px;
+    margin: 0 4px 0 0;
+    min-width: 60px;
+}
+
+.nft-card__price:last-of-type {
+    margin: 0;
+}
+
+.nft-card__price-title {
+    margin: 0;
+    color: var(--main-text-color);
+    opacity: 0.4;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+.nft-card__price-value {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0 0;
+    align-items: center;
+}
+
+.nft-card__price-value-text {
+    margin: 0 4px 0 0;
+    color: var(--main-text-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.nft-card__price-value-near-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.nft-card__price-value-near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.nft-card__rank {
+    margin: 8px 0 0;
+    color: var(--main-text-color);
+    opacity: 0.6;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 130%;
+
+}
+
+.nft-card__link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+}
+
+@media (max-width: 1600px) {
+    .nft-card__item-preview {
+        height: 296px;
+    }
+}
+
+@media (max-width: 1035px) {
+    .nft-card__item-preview {
+        height: 261px;
+    }
+
+    .nft-card {
+        padding: 16px 16px 16px 20px;
+    }
+}
+
+@media (max-width: 625px) {
+    .nft-card__item-preview {
+        height: 264px;
+    }
+}

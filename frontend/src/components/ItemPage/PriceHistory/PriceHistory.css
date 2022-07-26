@@ -1,0 +1,298 @@
+.price-history {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.price-history__no-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-history__no-item-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.price-history__no-item-text {
+    margin: 20px 0 0;
+    color: var(--main-text-color);
+    font-size: 16px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.price-history__container {
+    margin: 20px 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 160px;
+    grid-auto-rows: 160px;
+    row-gap: 8px;
+    column-gap: 8px;
+    height: 160px;
+    width: 100%;
+    border-bottom: 1px solid var(--main-graf-border-color);
+}
+
+.price-history__brake-points {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: flex-end; */
+    /* background-color: gold; */
+    min-width: 18px;
+}
+
+.price-history__brake-point {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0 0 0;
+
+}
+
+.price-history__brake-point:last-of-type {
+    margin: 0 0 0 0;
+}
+
+.price-history__brake-point-value {
+    margin: 0;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--main-text-color);
+    opacity: 0.7;
+
+}
+
+.price-history__items {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 160px;
+    grid-auto-rows: 160px;
+    row-gap: 8px;
+    column-gap: 8px;
+    align-items: flex-end;
+    position: relative;
+}
+
+.price-history__line {
+    position: absolute;
+    bottom: -4px;
+    /* left: 35px; */
+    height: 170px;
+    z-index: 2;
+}
+
+.price-history__line_week {
+    left: calc((100% / 7 - 18px) / 2);
+    width: calc(100% - (100% / 7 - 18px));
+}
+
+.price-history__line_month {
+    left: calc((100% / 30 - 18px) / 2);
+    width: calc(100% - (100% / 30 - 18px));
+}
+
+
+/* .recharts-surface{
+    width: 100%;
+}
+
+.recharts-wrapper{
+    width: 100% !important;
+} */
+
+.custom-tooltip {
+    width: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 16px;
+    background-color: var(--main-element-bg);
+}
+
+.custom-tooltip__label {
+    margin: 0;
+    color: var(--main-text-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.custom-tooltip__value {
+    margin: 0 4px 0 0;
+    color: var(--main-text-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.custom-tooltip__value-container {
+    display: flex;
+    flex-direction: row;
+    margin: 4px 0 0 0;
+
+}
+
+.custom-tooltip__near-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.custom-tooltip__near-icon-fill {
+    fill: var(--main-text-color);
+}
+
+.custom-tooltip__value-name {
+    margin: 16px 0 0 0;
+    color: var(--main-text-color);
+    opacity: 0.7;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.price-history__item {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.price-history__item-bg {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-text-color);
+    opacity: 0.16;
+}
+
+.price-history__item-date {
+    margin: 0;
+    color: var(--main-text-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+    position: absolute;
+    bottom: -30px;
+}
+
+.price-history__range-selector {
+    padding: 4px 8px;
+    border: 1px solid var(--main-border-color);
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+.price-history__range-selector-item {
+    margin: 0 8px 0 0;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+    background-color: transparent;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.price-history__range-selector-item:last-of-type {
+    margin: 0;
+}
+
+.price-history__range-selector-item_selected {
+    color: var(--main-element-bg);
+    background-color: var(--main-text-color);
+}
+
+
+@media (max-width: 700px) {
+    .price-history__container {
+        grid-template-rows: 80px;
+        grid-auto-rows: 80px;
+        height: 80px;
+        row-gap: 4px;
+        column-gap: 4px;
+    }
+
+    .price-history__line {
+        height: 90px;
+    }
+
+    .price-history__line_week {
+        left: calc((100% / 7 - 15px) / 2);
+        width: calc(100% - (100% / 7 - 15px));
+    }
+
+    .price-history__line_month {
+        left: calc((100% / 30 - 15px) / 2);
+        width: calc(100% - (100% / 30 - 15px));
+    }
+
+    .price-history__items {
+        height: 80px;
+        grid-template-rows: 80px;
+        grid-auto-rows: 80px;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    .price-history__brake-point-value {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .price-history__brake-point {
+        margin: 5px 0 0;
+    }
+
+    .price-history__item-date {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 130%;
+        bottom: -20px;
+    }
+
+
+    .custom-tooltip__label {
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+    .custom-tooltip__value {
+        font-size: 12px;
+        line-height: 13px;
+    }
+    .custom-tooltip__near-icon {
+        width: 11px;
+        height: 11px;
+    }
+    .custom-tooltip__value-name {
+        margin: 12px 0 0 0;
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

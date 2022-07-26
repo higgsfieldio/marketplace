@@ -1,0 +1,159 @@
+.explore-collections-page {
+    position: relative;
+    font-family: 'Urbanist';
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore-collections-page__bg-image {
+    position: absolute;
+    top: -188px;
+    right: 0;
+    transform: scale(-1, 1);
+    max-width: 100%;
+    z-index: 0;
+}
+
+.explore-collections-page__bg-trip-image {
+    position: absolute;
+    top: 0;
+    width: 1495px;
+    min-width: 130vw;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.explore-collections-page__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px * 2);
+    max-width: 1520px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.explore-collections-page__title {
+    font-family: 'Roboto';
+    margin: 80px 0 0;
+    color: var(--main-text-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 59px;
+}
+
+.explore-collections-page__category-and-range{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0;
+}
+
+.explore-collections-page__range-selector {
+    padding: 4px 8px;
+    border: 1px solid var(--main-border-color);
+    box-sizing: border-box;
+    height: 46px;
+    align-items: center;
+    border-radius: 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.explore-collections-page__price-range-selector {
+    padding: 4px 8px;
+    border: 1px solid var(--main-border-color);
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.explore-collections-page__range-selector-item {
+    margin: 0 8px 0 0;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+    background-color: transparent;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    /* line-height: 100%; */
+    cursor: pointer;
+}
+
+.explore-collections-page__range-selector-item:last-of-type {
+    margin: 0;
+}
+
+.explore-collections-page__range-selector-item_selected {
+    color: var(--main-element-bg);
+    background-color: var(--main-text-color);
+}
+
+.explore-collections-page__btn-sort-by-text{
+    position: absolute;
+    margin: 0;
+    top: -14px;
+    left: 19px;
+    padding: 3px 3px;
+    border-radius: 5px;
+    background-color: var(--app-background-color);
+    color: var(--main-text-color);
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+@media (max-width: 1280px) {
+    .explore-collections-page__container {
+        width: calc(100% - 20px * 2);
+        padding: 0 20px;
+    }
+
+    .explore-collections-page__bg-image {
+        top: 0;
+    }
+
+    .explore-collections-page__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+
+    }
+}
+
+@media (max-width: 760px) {
+    .explore-collections-page__container {
+        width: calc(100% - 12px * 2);
+        padding: 0 12px;
+    }
+    
+    .explore-collections-page__category-and-range{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .explore-collections-page__range-selector{
+        margin: 16px 0 0;
+    }
+
+}

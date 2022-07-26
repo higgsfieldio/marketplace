@@ -1,0 +1,35 @@
+.mini-preloader {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-preloader__container {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mini-preloader__loader {
+animation: rotate 0.5s infinite linear;
+}
+.mini-preloader__loader-color{
+    stop-color: var(--main-link-text-color);
+}
+
+.mini-preloader__loader-color_link{
+    stop-color: var(--main-link-color);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}

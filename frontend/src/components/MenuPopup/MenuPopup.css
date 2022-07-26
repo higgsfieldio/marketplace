@@ -1,0 +1,225 @@
+.menu-popup__container {
+  width: calc(100vw - 248px);
+  height: 130vh;
+  background: var(--app-background-color);
+  z-index: 1001;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 70px;
+	transform: translateY(70px); */
+
+  right: calc((100vw - 248px) * -1);
+  transition: transform 0.2s linear;
+}
+
+.menu-popup__container_active::before {
+  background: var(--app-background-color);
+}
+
+.menu-popup__container_active {
+  transform: translateX(calc((100vw - 248px) * -1));
+}
+
+.menu-popup__background {
+  width: 100%;
+  height: 130vh;
+  background: #000000;
+  opacity: 0;
+  z-index: 999;
+  transition: opacity 0.4s linear;
+}
+
+.menu-popup__background_active {
+  opacity: 0.3;
+  transition: opacity 0.4s linear;
+}
+
+
+.menu-popup {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  width: 100vw;
+  height: 130vh;
+  visibility: hidden;
+  transition: visibility 1s, opacity 1s linear;
+}
+
+.menu-popup-top {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100vw;
+  height: 130vh;
+  visibility: hidden;
+  transition: visibility 1s, opacity 1s linear;
+}
+
+
+.menu-popup_active {
+  visibility: visible;
+}
+
+.menu-popup__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-popup__close-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid var(--main-border-color);
+  cursor: pointer;
+
+}
+
+.menu-popup__close {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-popup__close-fill {
+  fill: var(--main-text-color);
+}
+
+.menu-popup__logo-container {
+  text-decoration: none;
+}
+
+.menu-popup__logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-popup__links {
+  display: flex;
+  flex-direction: column;
+  margin: 26px 0 0;
+}
+
+.menu-popup__link-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  box-sizing: border-box;
+  margin: 8px 0 0;
+}
+
+.menu-popup__link-container:first-of-type {
+  margin: 0;
+}
+
+.menu-popup__link-container_soon {
+  padding: 8px 0px 9px;
+}
+
+.menu-popup__link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  margin: 0;
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.menu-popup__link_soon {
+  font-family: 'Roboto';
+  opacity: 0.16;
+  margin: 3px 0 0;
+}
+
+.menu-popup__soon-text {
+  font-family: 'Roboto';
+  margin: 0;
+  color: var(--main-text-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+
+.menu-popup__btn-theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 98px;
+  cursor: pointer;
+  height: 40px;
+  margin: 40px 0 0;
+  background: var(--header-theme-btn-bg2);
+  transition: background-color 0.2s linear;
+  border-radius: 100px;
+}
+
+.menu-popup__btn-theme-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--header-theme-selector-bg);
+  transition: background-color 0.2s linear;
+  border-radius: 36px;
+  width: 80px;
+  height: 36px;
+  transition: margin 0.3s ease-in-out;
+}
+
+.menu-popup__btn-theme-selector-text {
+  margin: 0 8px 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  color: var(--header-theme-text-color);
+  transition: color 0.2s linear;
+}
+
+.menu-popup__btn-theme-selector-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.menu-popup__btn-theme-selector_position_dark {
+  margin: 0 2px 0 16px;
+}
+
+.menu-popup__btn-theme-selector_position_light {
+  margin: 0 16px 0 2px;
+}
+
+.menu-popup__btn-theme-selector_position_trip {
+  margin: 0 9px 0 9px;
+}
+
+@media (max-width: 586px) {
+  .menu-popup__container {
+    width: 100vw;
+    right: calc(100vw * -1);
+  }
+
+  .menu-popup__container_active {
+    transform: translateX(calc(100vw * -1));
+  }
+
+
+}
